@@ -1,0 +1,2 @@
+<app-new [startingId]="itemList.length" (newEvent)="addItem($event)"></app-new>
+<app-item *ngFor="let item of itemList" [item]="item" class="items"></app-item>

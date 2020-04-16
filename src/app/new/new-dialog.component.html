@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>New Item</h1>
+
+<div mat-dialog-content>
+
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.newItem.name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.newItem.description">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.newItem.price">
+    </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button matRipple (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.newItem" cdkFocusInitial>[ADD]</button>
+</div>
